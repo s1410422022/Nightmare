@@ -2,9 +2,9 @@
 
 public class PlayerShooting : MonoBehaviour
 {
-    public int damagePerShot = 20;
-    public float timeBetweenBullets = 0.15f;
-    public float range = 100f;
+    public int damagePerShot = 20;//傷害
+    public float timeBetweenBullets = 0.15f;//間格時間
+    public float range = 100f;//範圍
 
 
     float timer;
@@ -30,7 +30,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update ()
     {
-        timer += Time.deltaTime;
+        timer += Time.deltaTime;  //60fps   1/60=0.016666666
 
 		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
